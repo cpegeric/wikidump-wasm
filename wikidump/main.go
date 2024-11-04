@@ -64,7 +64,8 @@ func get_index() int32 {
 
 	input := pdk.Input()
 
-	scanner := bufio.NewScanner(bytes.NewReader(input))
+	reader := bzip2.NewReader(bytes.NewReader(input))
+	scanner := bufio.NewScanner(reader)
 	var offsetsize []IndexLocation
 	for scanner.Scan() {
 		line := scanner.Text()
