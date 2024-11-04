@@ -27,7 +27,7 @@ func wikidumps() {
 	manifest := extism.Manifest{
 		Wasm: []extism.Wasm{
 			extism.WasmFile{
-				Path: "wiki.wasm",
+				Path: "wikidump.wasm",
 			},
 		},
 	}
@@ -58,7 +58,7 @@ func wikidumps() {
 		os.Exit(1)
 	}
 
-	indexf := "enwiki-latest-pages-articles-multistream-index1.txt-p1p41242"
+	indexf := "/Users/eric/github/eric_test/wiki/enwiki-latest-pages-articles-multistream-index1.txt-p1p41242.bz2"
 	data, err := os.ReadFile(indexf)
 	if err != nil {
 		fmt.Println(err)
